@@ -27,7 +27,7 @@ export const HeartAnimation = (): ReactElement => {
     <StyledButton
       ref={animationContainer}
       onClick={e => {
-        const segment = segments[isHearted ? 'in' : 'out'];
+        const segment = segments[isHearted ? 'out' : 'in'];
         lottieAnimation.current.playSegments(segment, true);
         setIsHearted(lastState => !lastState);
       }}

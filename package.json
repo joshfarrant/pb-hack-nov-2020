@@ -13,6 +13,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "framer-motion": "2.9.4",
     "globby": "11.0.1",
     "lottie-web": "5.7.4",
     "next": "10.0.1",
