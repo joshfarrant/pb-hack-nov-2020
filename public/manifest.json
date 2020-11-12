@@ -1,26 +1,33 @@
 {
-  "name": "Isometric",
-  "short_name": "Isometric",
+  "theme_color": "#8a2d87",
+  "background_color": "#8a2d87",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "/",
+  "name": "PB - Native",
+  "app_name": "PB - Can't believe it's not native",
+  "short_name": "PB - Native",
+  "description": "PB Hackathon native app",
   "icons": [
     {
-      "src": "/assets/icons/icon-192.png",
+      "src": "/assets/icons/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/assets/icons/icon-384.png",
+      "src": "/assets/icons/icon-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/icons/icon-384x384.png",
       "sizes": "384x384",
       "type": "image/png"
     },
     {
-      "src": "/assets/icons/icon-512.png",
+      "src": "/assets/icons/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
-  ],
-  "theme_color": "#da2586",
-  "background_color": "#ffffff",
-  "start_url": "/",
-  "display": "standalone",
-  "orientation": "portrait"
+  ]
 }
