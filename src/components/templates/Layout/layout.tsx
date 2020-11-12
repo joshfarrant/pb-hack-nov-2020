@@ -6,6 +6,7 @@ import { TProps } from './layout.types';
 import {
   StyledBackContainer,
   StyledBackLink,
+  StyledLinkText,
   StyledContainer,
   StyledDevice,
   StyledHeader,
@@ -28,10 +29,10 @@ export const Layout = ({
           {backHref && (
             <StyledBackContainer>
               <Link href={backHref}>
-                <>
+                <StyledBackLink>
                   <FaChevronLeft />
-                  <StyledBackLink>{backText ?? 'Back'}</StyledBackLink>
-                </>
+                  <StyledLinkText>{backText ?? 'Back'}</StyledLinkText>
+                </StyledBackLink>
               </Link>
             </StyledBackContainer>
           )}

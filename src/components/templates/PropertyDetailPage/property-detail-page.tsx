@@ -12,8 +12,10 @@ import {
   Image,
 } from './property-detail-page.styled';
 import { TProps } from './property-detail-page.types';
+import { transition } from '../../../constants';
 
 export const PropertyDetailPage = ({
+  id,
   price,
   imgAlt,
   imgSrc,
@@ -30,14 +32,34 @@ export const PropertyDetailPage = ({
   return (
     <>
       <NextSeo title="PB Hack" description="Site description" />
-      <Layout backHref="/">
-        <StyledContainer>
-          <StyledHeading>Your Results</StyledHeading>
-          <Image src={imgSrc} alt={imgAlt} />
-          <CardContentDiv>
-            <Heading2>{formattedPrice}</Heading2>
-            <Paragraph>{address}</Paragraph>
-            <Paragraph>{propertyType}</Paragraph>
+      <Layout backHref="/properties" backText="Back to search results">
+        <StyledContainer
+          layoutId={`property-container-${id}`}
+          transition={transition}
+        >
+          <StyledHeading>Property Details</StyledHeading>
+          <Image
+            src={imgSrc}
+            alt={imgAlt}
+            layoutId={`property-image-${id}`}
+            transition={transition}
+          />
+          <CardContentDiv
+            layoutId={`property-content-container-${id}`}
+            transition={transition}
+          >
+            <Heading2 layoutId={`property-price-${id}`} transition={transition}>
+              {formattedPrice}
+            </Heading2>
+            <Paragraph
+              layoutId={`property-address-${id}`}
+              transition={transition}
+            >
+              {address}
+            </Paragraph>
+            <Paragraph layoutId={`property-type-${id}`} transition={transition}>
+              {propertyType}
+            </Paragraph>
             <Paragraph>{description}</Paragraph>
           </CardContentDiv>
         </StyledContainer>

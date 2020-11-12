@@ -50,10 +50,14 @@ export const StyledBackContainer = styled.div`
   padding: 0 15px;
 `;
 
-export const StyledBackLink = styled.a`
+export const StyledLinkText = styled.span`
   display: block;
   margin-left: 4px;
   color: var(--grey-color);
-  cursor: pointer;
   font-weight: var(--font-weight-bold);
+`;
+
+export const StyledBackLink = styled.a`
+  cursor: pointer;
+  display: contents;
 `;
