@@ -9,7 +9,7 @@ import { TickAnimation } from '../../atoms/TickAnimation';
 export const PropertiesPage = (): ReactElement => (
   <>
     <NextSeo title="PB Hack" description="Site description" />
-    <Layout>
+    <Layout backHref="/">
       <h1>Properties</h1>
       <TickAnimation />
     </Layout>

@@ -6,14 +6,17 @@ export const GlobalStyle = createGlobalStyle`
       Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
 
     --font-weight-regular: 400;
-    --font-weight-semibold: 500;
-    --font-weight-black: 900;
+    --font-weight-bold: 700;
 
     --font-size-base: 16px;
     --font-family-heading: 'Montserrat', var(--font-family-fallback);
     --font-family-body: 'Lato', var(--font-family-fallback);
-    
+
+
+    --grey-color: #909090;
+
     font-size: var(--font-size-base);
+    font-family: var(--font-family-primary);
   }
 
   body {
