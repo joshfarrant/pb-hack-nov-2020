@@ -14,11 +14,12 @@ export const StyledDevice = styled.div`
   flex: 1;
   display: flex;
   flex-flow: column;
-  max-width: 375px;
-  max-height: 726px;
+  max-width: 500px;
+  max-height: 900px;
   width: 100%;
   height: 100%;
   background: #fff;
+  overflow-y: scroll;
 `;
 
 export const StyledMain = styled.main`

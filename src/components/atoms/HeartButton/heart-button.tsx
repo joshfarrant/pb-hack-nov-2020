@@ -8,7 +8,7 @@ const segments = {
   out: [61, 120] as AnimationSegment,
 };
 
-export const HeartAnimation = (): ReactElement => {
+export const HeartButton = (): ReactElement => {
   const animationContainer = useRef();
   const [isHearted, setIsHearted] = useState(false);
   const lottieAnimation = useRef<AnimationItem>();
@@ -26,7 +26,7 @@ export const HeartAnimation = (): ReactElement => {
   return (
     <StyledButton
       ref={animationContainer}
-      onClick={e => {
+      onClick={() => {
         const segment = segments[isHearted ? 'out' : 'in'];
         lottieAnimation.current.playSegments(segment, true);
         setIsHearted(lastState => !lastState);
