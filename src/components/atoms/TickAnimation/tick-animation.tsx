@@ -17,13 +17,5 @@ export const TickAnimation = (): ReactElement => {
     });
   }, []);
 
-  return (
-    <StyledContainer
-      ref={animationContainer}
-      style={{
-        width: 100,
-        height: 100,
-      }}
-    />
-  );
+  return <StyledContainer ref={animationContainer} />;
 };
