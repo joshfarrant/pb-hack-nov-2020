@@ -13,7 +13,7 @@ export const PROPERTIES: TProperty[] = [
     id: 1,
     price: 300_000,
     imgAlt: 'large house',
-    imgSrc: '/assets/images/1.jpg',
+    imgSrc: '/assets/images/home-1.jpg',
     address: '1 Farrant Close, Joshville, JF 2DG',
     propertyType: '5 Bedroom detached house',
     description:
@@ -23,7 +23,7 @@ export const PROPERTIES: TProperty[] = [
     id: 2,
     price: 145_500,
     imgAlt: 'small house',
-    imgSrc: '/assets/images/2.jpg',
+    imgSrc: '/assets/images/home-2.jpg',
     address: '28 Harper Road, Butterville, IC3 INB',
     propertyType: '1 Bedroom shed',
     description:
@@ -33,7 +33,7 @@ export const PROPERTIES: TProperty[] = [
     id: 3,
     price: 780_000,
     imgAlt: 'palace',
-    imgSrc: '/assets/images/3.jpg',
+    imgSrc: '/assets/images/home-3.jpg',
     address: '1 Myles Avenue, Worcestershire, W5 3SU',
     propertyType: '75 Bedroom semi-detached palace',
     description:
@@ -43,7 +43,7 @@ export const PROPERTIES: TProperty[] = [
     id: 4,
     price: 500_000,
     imgAlt: 'caravan',
-    imgSrc: '/assets/images/4.jpg',
+    imgSrc: '/assets/images/home-4.jpg',
     address: '5 Zaburdejeva Street, Wolverhampton, WS5 1GK',
     propertyType: '3 Bedroom mobile home',
     description:
@@ -53,7 +53,7 @@ export const PROPERTIES: TProperty[] = [
     id: 5,
     price: 360_000,
     imgAlt: 'large house',
-    imgSrc: '/assets/images/5.jpg',
+    imgSrc: '/assets/images/home-5.jpg',
     address: '12 Kent Road, Tamworth, B79 1HK',
     propertyType: '4 Bedroom detached house',
     description:
