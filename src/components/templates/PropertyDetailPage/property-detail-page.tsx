@@ -56,13 +56,12 @@ export const PropertyDetailPage = ({
             layoutId={`property-content-container-${id}`}
             transition={transition}
           >
-            <TopContainer>
-              <Heading2
-                layoutId={`property-price-${id}`}
-                transition={transition}
-              >
-                {formattedPrice}
-              </Heading2>
+            <TopContainer
+              layout
+              layoutId={`property-price-${id}`}
+              transition={transition}
+            >
+              <Heading2>{formattedPrice}</Heading2>
               <IconContainer>
                 <HeartButton />
                 <ShareButton />

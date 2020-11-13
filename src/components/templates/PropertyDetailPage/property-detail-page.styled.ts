@@ -18,7 +18,7 @@ export const CardContentDiv = styled(motion.div)`
   margin: 15px 10px 20px;
 `;
 
-export const TopContainer = styled.div`
+export const TopContainer = styled(motion.div)`
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -30,7 +30,7 @@ export const IconContainer = styled.div`
   grid-gap: 6px;
 `;
 
-export const Heading2 = styled(motion.h2)`
+export const Heading2 = styled.h2`
   font-size: 20px;
   font-weight: bold;
   margin: 0;

@@ -14,8 +14,9 @@ export const CardLink = styled(motion.a)`
 export const CardContentDiv = styled(motion.div)`
   margin: 15px 10px 20px;
 `;
-export const Heading2 = styled(motion.h2)`
+export const Heading2 = styled.h2`
   font-size: 20px;
+  display: inline;
   font-weight: bold;
   margin: 0;
 `;

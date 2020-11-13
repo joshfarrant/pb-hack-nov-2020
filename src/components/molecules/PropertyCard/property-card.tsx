@@ -1,6 +1,7 @@
 import { ReactElement } from 'react';
 import Link from 'next/link';
 
+import { motion } from 'framer-motion';
 import { TProps } from './property-card.types';
 import {
   CardLink,
@@ -38,9 +39,13 @@ export function PropertyCard({
           layoutId={`property-content-container-${id}`}
           transition={transition}
         >
-          <Heading2 layoutId={`property-price-${id}`}>
-            {formattedPrice}
-          </Heading2>
+          <motion.div
+            layoutId={`property-price-${id}`}
+            transition={transition}
+            layout
+          >
+            <Heading2>{formattedPrice}</Heading2>
+          </motion.div>
           <Paragraph
             layoutId={`property-address-${id}`}
             transition={transition}
