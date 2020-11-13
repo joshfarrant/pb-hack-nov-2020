@@ -10,12 +10,4 @@ export const StyledButton = styled.button`
   background: none;
   border: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-export const StyledAnimation = styled.div`
-  width: 32px;
-  height: 32px;
 `;

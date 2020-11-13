@@ -3,7 +3,7 @@ import { NextSeo } from 'next-seo';
 
 import { Layout } from '../../templates/Layout';
 import { PROPERTIES } from '../../../constants/properties';
-import { PropertyCard } from '../../PropertyCard';
+import { PropertyCard } from '../../molecules/PropertyCard';
 
 import {
   StyledContainer,
