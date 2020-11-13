@@ -2,9 +2,10 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
 export const CardLink = styled(motion.a)`
-  border-radius: 25px;
+  border-radius: 8px;
 
-  box-shadow: 1px 6px 18px -8px #595959;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border: 1px solid #dbdbdb;
   overflow: hidden;
   max-width: 100%;
   background: #fff;
@@ -12,7 +13,7 @@ export const CardLink = styled(motion.a)`
 `;
 
 export const CardContentDiv = styled(motion.div)`
-  margin: 15px 10px 20px;
+  margin: 16px 16px 20px;
 `;
 export const Heading2 = styled.h2`
   font-size: 20px;
@@ -28,7 +29,7 @@ export const Paragraph = styled(motion.p)`
 export const Image = styled(motion.div)`
   background-image: url(${({ imgSrc }) => imgSrc});
   width: 100%;
-  height: 200px;
+  height: 194px;
   background-size: cover;
   background-position: center;
 `;

@@ -6,6 +6,8 @@ export const StyledButton = styled.button`
   font-family: var(--font-family-heading);
   font-size: 14px;
   font-weight: var(--font-weight-bold);
+  border-radius: 2px;
+  cursor: pointer;
 
   ${({ color }) => {
     let textColor = '#282637';

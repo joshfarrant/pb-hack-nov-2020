@@ -27,4 +27,8 @@ export const GlobalStyle = createGlobalStyle`
   h1,h2,h3,h4,h5,h6{
     font-family: var(--font-family-heading);
   }
+
+  * {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
 `;

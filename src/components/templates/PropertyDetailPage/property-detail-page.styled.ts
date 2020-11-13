@@ -15,12 +15,13 @@ export const StyledContainer = styled(motion.div)`
 `;
 
 export const CardContentDiv = styled(motion.div)`
-  margin: 15px 10px 20px;
+  margin: 16px 16px 20px;
 `;
 
 export const CardBodyContainer = styled(motion.div)`
-  margin: 15px 10px 20px;
+  margin: 15px 10px 24px;
 `;
+
 export const TopContainer = styled(motion.div)`
   display: flex;
   flex-flow: row nowrap;
@@ -34,7 +35,8 @@ export const IconContainer = styled.div`
 `;
 
 export const Heading2 = styled.h2`
-  font-size: 20px;
+  font-size: 22px;
+  line-height: 44px;
   font-weight: bold;
   margin: 0;
 `;
@@ -46,13 +48,14 @@ export const Paragraph = styled(motion.p)`
 
 export const StyledDescription = styled(motion.p)`
   font-size: 16px;
-  margin: 5px 0 15px;
+  line-height: 24px;
+  margin: 0 0 16px;
 `;
 
 export const Image = styled(motion.div)`
   background-image: url(${({ imgSrc }) => imgSrc});
   width: 100%;
-  height: 200px;
+  height: 212px;
   background-size: cover;
   background-position: center;
 `;
@@ -61,10 +64,10 @@ export const ButtonContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 15px;
-  padding: 15px 0;
+  padding: 0 0 24px;
 `;
 
 export const StyledHR = styled.div`
   border-bottom: 1px solid #dbdbdb;
-  margin-bottom: 15px;
+  margin-bottom: 24px;
 `;

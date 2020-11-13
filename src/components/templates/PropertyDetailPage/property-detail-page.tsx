@@ -74,14 +74,14 @@ export const PropertyDetailPage = ({
             >
               {address}
             </Paragraph>
+            <Paragraph layoutId={`property-type-${id}`} transition={transition}>
+              {propertyType}
+            </Paragraph>
           </CardContentDiv>
           <CardBodyContainer
             layoutId={`property-body-${id}`}
             transition={transition}
           >
-            <Paragraph layoutId={`property-type-${id}`} transition={transition}>
-              {propertyType}
-            </Paragraph>
             <ButtonContainer>
               <Button color="primary">Book a viewing</Button>
               <Button color="secondary">Make an offer</Button>
