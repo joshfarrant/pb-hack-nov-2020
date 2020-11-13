@@ -15,12 +15,14 @@ export const CardLink = styled(motion.a)`
 export const CardContentDiv = styled(motion.div)`
   margin: 16px 16px 20px;
 `;
+
 export const Heading2 = styled.h2`
   font-size: 20px;
   display: inline;
   font-weight: bold;
   margin: 0;
 `;
+
 export const Paragraph = styled(motion.p)`
   font-size: 16px;
   margin: 5px 0;
