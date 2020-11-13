@@ -2,13 +2,17 @@ import { ReactElement } from 'react';
 import { NextSeo } from 'next-seo';
 
 import { Layout } from '../../templates/Layout';
+import { Button } from '../../atoms/Button';
 
 import {
+  ButtonContainer,
   StyledContainer,
   StyledHeading,
+  StyledDescription,
   CardContentDiv,
   Heading2,
   Paragraph,
+  StyledHR,
   Image,
 } from './property-detail-page.styled';
 import { TProps } from './property-detail-page.types';
@@ -21,7 +25,7 @@ export const PropertyDetailPage = ({
   imgSrc,
   address,
   propertyType,
-  description,
+  description = '',
 }: TProps): ReactElement => {
   const formattedPrice = new Intl.NumberFormat('en-GB', {
     style: 'currency',
@@ -60,7 +64,14 @@ export const PropertyDetailPage = ({
             <Paragraph layoutId={`property-type-${id}`} transition={transition}>
               {propertyType}
             </Paragraph>
-            <Paragraph>{description}</Paragraph>
+            <ButtonContainer>
+              <Button color="primary">Book a viewing</Button>
+              <Button color="secondary">Make an offer</Button>
+            </ButtonContainer>
+            <StyledHR />
+            {description.split('\n').map(x => (
+              <StyledDescription>{x}</StyledDescription>
+            ))}
           </CardContentDiv>
         </StyledContainer>
       </Layout>

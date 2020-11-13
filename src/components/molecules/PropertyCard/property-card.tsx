@@ -9,7 +9,7 @@ import {
   Paragraph,
   Image,
 } from './property-card.styled';
-import { transition } from '../../constants';
+import { transition } from '../../../constants';
 
 export function PropertyCard({
   id,
