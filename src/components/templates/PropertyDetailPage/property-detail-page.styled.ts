@@ -21,7 +21,6 @@ export const CardContentDiv = styled(motion.div)`
 export const CardBodyContainer = styled(motion.div)`
   margin: 15px 10px 20px;
 `;
-
 export const TopContainer = styled(motion.div)`
   display: flex;
   flex-flow: row nowrap;
