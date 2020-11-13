@@ -74,12 +74,15 @@ export const StyledHR = styled.div`
 
 export const StyledOverlay = styled(motion.div)`
   background: rgba(4, 4, 15, 0.8);
-  height: 100vh;
-  width: 100vh;
+
   z-index: 100;
   position: fixed;
+  max-width: 100%;
+  max-height: 100%;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
 `;
 
 export const StyledModalContainer = styled(motion.div)``;
