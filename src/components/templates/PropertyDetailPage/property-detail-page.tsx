@@ -12,6 +12,7 @@ import {
   StyledHeading,
   StyledDescription,
   TopContainer,
+  CardBodyContainer,
   IconContainer,
   CardContentDiv,
   Heading2,
@@ -47,7 +48,7 @@ export const PropertyDetailPage = ({
         >
           <StyledHeading>Property Details</StyledHeading>
           <Image
-            src={imgSrc}
+            imgSrc={imgSrc}
             alt={imgAlt}
             layoutId={`property-image-${id}`}
             transition={transition}
@@ -73,6 +74,11 @@ export const PropertyDetailPage = ({
             >
               {address}
             </Paragraph>
+          </CardContentDiv>
+          <CardBodyContainer
+            layoutId={`property-body-${id}`}
+            transition={transition}
+          >
             <Paragraph layoutId={`property-type-${id}`} transition={transition}>
               {propertyType}
             </Paragraph>
@@ -84,7 +90,7 @@ export const PropertyDetailPage = ({
             {description.split('\n').map(x => (
               <StyledDescription key={x.substr(0, 15)}>{x}</StyledDescription>
             ))}
-          </CardContentDiv>
+          </CardBodyContainer>
         </StyledContainer>
       </Layout>
     </>

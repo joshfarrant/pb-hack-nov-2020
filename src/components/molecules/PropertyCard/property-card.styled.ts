@@ -25,6 +25,10 @@ export const Paragraph = styled(motion.p)`
   margin: 5px 0;
 `;
 
-export const Image = styled(motion.img)`
+export const Image = styled(motion.div)`
+  background-image: url(${({ imgSrc }) => imgSrc});
   width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
 `;

@@ -30,7 +30,7 @@ export function PropertyCard({
     <Link href={`/properties/${id}`}>
       <CardLink layoutId={`property-container-${id}`} transition={transition}>
         <Image
-          src={imgSrc}
+          imgSrc={imgSrc}
           alt={imgAlt}
           layoutId={`property-image-${id}`}
           transition={transition}
@@ -56,6 +56,7 @@ export function PropertyCard({
             {propertyType}
           </Paragraph>
         </CardContentDiv>
+        <motion.div layoutId={`property-body-${id}`} transition={transition} />
       </CardLink>
     </Link>
   );

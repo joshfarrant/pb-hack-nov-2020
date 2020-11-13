@@ -9,4 +9,5 @@ export const StyledButton = styled.button`
   box-shadow: none;
   background: none;
   border: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 `;
