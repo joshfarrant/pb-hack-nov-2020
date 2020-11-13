@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, ReactElement } from 'react';
 import lottie, { AnimationItem, AnimationSegment } from 'lottie-web';
 
-import { StyledButton } from './heart-button.styled';
+import { StyledAnimation, StyledButton } from './heart-button.styled';
 
 const segments = {
   in: [0, 60] as AnimationSegment,
@@ -25,12 +25,13 @@ export const HeartButton = (): ReactElement => {
 
   return (
     <StyledButton
-      ref={animationContainer}
       onClick={() => {
         const segment = segments[isHearted ? 'out' : 'in'];
         lottieAnimation.current.playSegments(segment, true);
         setIsHearted(lastState => !lastState);
       }}
-    />
+    >
+      <StyledAnimation ref={animationContainer} />
+    </StyledButton>
   );
 };

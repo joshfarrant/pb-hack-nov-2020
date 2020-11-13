@@ -21,7 +21,7 @@ export const ShareButton = (): ReactElement => {
         }
       }}
     >
-      S
+      <img src="/assets/images/share.svg" alt="Share" />
     </StyledButton>
   );
 };
