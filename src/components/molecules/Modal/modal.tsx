@@ -7,6 +7,7 @@ import {
   StyledHeader,
 } from './modal.styled';
 import { TProps } from './modal.types';
+import { BookViewing } from '../../molecules/BookViewing';
 
 export function Modal({ setModalOpen, isOpen }: TProps): ReactElement {
   return (
@@ -25,6 +26,7 @@ export function Modal({ setModalOpen, isOpen }: TProps): ReactElement {
           onClick={() => setModalOpen(false)}
         />
       </StyledHeader>
+      <BookViewing />
     </StyledContainer>
   );
 }

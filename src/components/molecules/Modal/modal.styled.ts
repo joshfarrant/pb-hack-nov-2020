@@ -6,7 +6,6 @@ export const StyledContainer = styled(motion.div)`
   bottom: 15px;
   left: 15px;
   width: calc(100% - 30px);
-  height: 300px;
   background: #fff;
   border-radius: 16px;
   z-index: 500;
