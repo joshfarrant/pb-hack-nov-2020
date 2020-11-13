@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { useEffect, useRef, useState, ReactElement } from 'react';
-import lottie from 'lottie-web';
+import lottie, { AnimationItem } from 'lottie-web';
 
 import {
   RadioButtonContainer,
@@ -23,7 +23,7 @@ export const BookViewing = ({
   const animationContainer = useRef();
   const animationOutContainer = useRef();
   const [runAnimOut, setRunAnimOut] = useState(false);
-  const [anim2, setAnim2] = useState();
+  const [anim2, setAnim2] = useState<AnimationItem>();
 
   useEffect(() => {
     const animIn = lottie.loadAnimation({
