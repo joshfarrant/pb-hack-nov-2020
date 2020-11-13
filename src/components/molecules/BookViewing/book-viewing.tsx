@@ -1,6 +1,4 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import { ReactElement } from 'react';
-
 import {
   RadioButtonContainer,
   WrappingDiv,
@@ -9,9 +7,9 @@ import {
   ButtonContainer,
 } from './book-viewing.styled';
 
-import { Button } from '../atoms/Button';
+import { Button } from '../../atoms/Button';
 
-export const BookViewing = (): ReactElement => {
+export const BookViewing: React.FC = () => {
   return (
     <WrappingDiv>
       <RadioButtonContainer>
