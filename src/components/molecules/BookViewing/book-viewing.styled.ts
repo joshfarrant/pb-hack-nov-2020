@@ -62,7 +62,11 @@ export const RadioButtonDiv = styled.div`
 
 export const ButtonContainer = styled.div`
   display: grid;
-  grid-template-rows: 1fr 1fr;
   grid-gap: 15px;
   padding: 0;
+`;
+
+export const AnimationContainer = styled.div`
+  height: 225px;
+  width: 100%;
 `;
