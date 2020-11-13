@@ -3,12 +3,16 @@ import { NextSeo } from 'next-seo';
 
 import { Layout } from '../../templates/Layout';
 import { Button } from '../../atoms/Button';
+import { HeartButton } from '../../atoms/HeartButton';
+import { ShareButton } from '../../atoms/ShareButton';
 
 import {
   ButtonContainer,
   StyledContainer,
   StyledHeading,
   StyledDescription,
+  TopContainer,
+  IconContainer,
   CardContentDiv,
   Heading2,
   Paragraph,
@@ -52,9 +56,18 @@ export const PropertyDetailPage = ({
             layoutId={`property-content-container-${id}`}
             transition={transition}
           >
-            <Heading2 layoutId={`property-price-${id}`} transition={transition}>
-              {formattedPrice}
-            </Heading2>
+            <TopContainer>
+              <Heading2
+                layoutId={`property-price-${id}`}
+                transition={transition}
+              >
+                {formattedPrice}
+              </Heading2>
+              <IconContainer>
+                <HeartButton />
+                <ShareButton />
+              </IconContainer>
+            </TopContainer>
             <Paragraph
               layoutId={`property-address-${id}`}
               transition={transition}
@@ -70,7 +83,7 @@ export const PropertyDetailPage = ({
             </ButtonContainer>
             <StyledHR />
             {description.split('\n').map(x => (
-              <StyledDescription>{x}</StyledDescription>
+              <StyledDescription key={x.substr(0, 15)}>{x}</StyledDescription>
             ))}
           </CardContentDiv>
         </StyledContainer>
