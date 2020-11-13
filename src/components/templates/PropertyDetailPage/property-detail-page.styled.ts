@@ -71,3 +71,15 @@ export const StyledHR = styled.div`
   border-bottom: 1px solid #dbdbdb;
   margin-bottom: 24px;
 `;
+
+export const StyledOverlay = styled(motion.div)`
+  background: rgba(4, 4, 15, 0.8);
+  height: 100vh;
+  width: 100vh;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+`;
+
+export const StyledModalContainer = styled(motion.div)``;

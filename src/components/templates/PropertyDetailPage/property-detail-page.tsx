@@ -1,10 +1,12 @@
-import { ReactElement } from 'react';
+import { useState, ReactElement } from 'react';
 import { NextSeo } from 'next-seo';
+import { AnimatePresence } from 'framer-motion';
 
 import { Layout } from '../../templates/Layout';
 import { Button } from '../../atoms/Button';
 import { HeartButton } from '../../atoms/HeartButton';
 import { ShareButton } from '../../atoms/ShareButton';
+import { Modal } from '../../molecules/Modal';
 
 import {
   ButtonContainer,
@@ -12,6 +14,7 @@ import {
   StyledHeading,
   StyledDescription,
   TopContainer,
+  StyledOverlay,
   CardBodyContainer,
   IconContainer,
   CardContentDiv,
@@ -32,6 +35,7 @@ export const PropertyDetailPage = ({
   propertyType,
   description = '',
 }: TProps): ReactElement => {
+  const [showModal, setShowModal] = useState(false);
   const formattedPrice = new Intl.NumberFormat('en-GB', {
     style: 'currency',
     currency: 'GBP',
@@ -83,7 +87,14 @@ export const PropertyDetailPage = ({
             transition={transition}
           >
             <ButtonContainer>
-              <Button color="primary">Book a viewing</Button>
+              <Button
+                color="primary"
+                onClick={() => {
+                  setShowModal(true);
+                }}
+              >
+                Book a viewing
+              </Button>
               <Button color="secondary">Make an offer</Button>
             </ButtonContainer>
             <StyledHR />
@@ -93,6 +104,17 @@ export const PropertyDetailPage = ({
           </CardBodyContainer>
         </StyledContainer>
       </Layout>
+      <AnimatePresence>
+        {showModal && (
+          <StyledOverlay
+            key="overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          />
+        )}
+      </AnimatePresence>
+      <Modal setModalOpen={setShowModal} isOpen={showModal} />
     </>
   );
 };
