@@ -11,7 +11,7 @@ export const ShareButton = (): ReactElement => {
           const shareData = {
             title: 'Purplebricks',
             text: 'House for sale with Purplebricks',
-            url: window.location.href,
+            url: 'https://pb-hack-nov-2020.vercel.app/properties',
           };
           try {
             await navigator.share(shareData);
