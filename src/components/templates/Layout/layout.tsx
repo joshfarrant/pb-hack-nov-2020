@@ -22,7 +22,7 @@ export const Layout = ({
     <StyledContainer>
       <StyledDevice>
         <StyledHeader>
-          <StyledLogo src="/assets/img/logo.svg" alt="Purplebricks logo" />
+          <StyledLogo src="/assets/images/logo.svg" alt="Purplebricks logo" />
         </StyledHeader>
         <StyledMain>
           {backHref && (
