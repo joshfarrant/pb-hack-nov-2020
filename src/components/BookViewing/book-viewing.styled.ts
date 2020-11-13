@@ -1,13 +1,6 @@
 import styled from 'styled-components';
 
-export const WrappingDiv = styled.div`  
-`;
-
-
-export const Paragraph = styled.p`
-  font-size: 16px;
-  margin: 5px 0;
-`;
+export const WrappingDiv = styled.div``;
 
 export const RadioButtonContainer = styled.div`
   display: grid;
@@ -15,10 +8,10 @@ export const RadioButtonContainer = styled.div`
   margin: 10px 0;
 `;
 
-export const RadionBtnInput = styled.input`
+export const RadioBtnInput = styled.input`
   appearance: none;
   background-color: white;
-  border: 2px solid #8A2D87;
+  border: 2px solid #8a2d87;
   border-radius: 50%;
   display: flex;
   flex: 0 1 32px;
@@ -28,11 +21,11 @@ export const RadionBtnInput = styled.input`
   top: 0;
   transition: 0.2s all ease-out;
   width: 32px;
-  
-  &::after{
+
+  &::after {
     background-color: white;
     border-radius: 100%;
-    content: "";
+    content: '';
     display: block;
     height: 16px;
     left: 50%;
@@ -42,28 +35,27 @@ export const RadionBtnInput = styled.input`
     width: 16px;
   }
 
-  &:focus{
-    box-shadow: 0px 0px 0px 2px #C856C4;
+  &:focus {
+    box-shadow: 0px 0px 0px 2px #c856c4;
     outline: none;
   }
 
-  &:checked{
-    &::after{
-        background-color: #400F4C;
+  &:checked {
+    &::after {
+      background-color: #400f4c;
     }
-
   }
-`
+`;
 
 export const RadioButtonDiv = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   font-size: 18px;
-  & label{
+  & label {
     margin-left: 5px;
   }
-`
+`;
 export const ButtonContainer = styled.div`
   display: grid;
   grid-template-rows: 1fr 1fr;

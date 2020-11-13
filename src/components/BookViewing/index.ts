@@ -1,1 +1,1 @@
-export * from './book-viewing'
+export * from './book-viewing';
