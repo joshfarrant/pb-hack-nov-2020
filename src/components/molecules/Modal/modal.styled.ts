@@ -26,7 +26,6 @@ export const StyledTitle = styled.h3`
   font-weight: 700;
   margin: 0;
 `;
-
 export const StyledCloseIcon = styled.img`
   cursor: pointer;
 `;
