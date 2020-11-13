@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { useEffect, useRef, useState, ReactElement } from 'react';
-import lottie, { AnimationItem, AnimationSegment } from 'lottie-web';
+import lottie from 'lottie-web';
 
 import {
   RadioButtonContainer,
@@ -12,60 +12,51 @@ import {
 } from './book-viewing.styled';
 import { Button } from '../../atoms/Button';
 
-const segments = {
-  in: [0, 78] as AnimationSegment,
-  out: [79, 110] as AnimationSegment,
-};
-
 export const BookViewing = ({
   closeModal,
 }: {
   closeModal: () => void;
 }): ReactElement => {
   const [showAnimation, setShowAnimation] = useState(false);
-  const [animateIn, setAnimateIn] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
   const [selectedIdx, setSelectedIdx] = useState(0);
   const animationContainer = useRef();
-  const [lottieAnimation, setLottieAnimation] = useState<AnimationItem>();
+  const animationOutContainer = useRef();
+  const [runAnimOut, setRunAnimOut] = useState(false);
+  const [anim2, setAnim2] = useState();
 
   useEffect(() => {
-    if (!animationContainer.current) {
-      return;
-    }
-
-    const anim = lottie.loadAnimation({
+    const animIn = lottie.loadAnimation({
       container: animationContainer.current,
       renderer: 'svg',
       loop: false,
       autoplay: false,
-      path: '/assets/animations/success.json',
+      path: '/assets/animations/success-in.json',
     });
 
-    if (showAnimation) {
-      anim.playSegments(segments.in, true);
-    }
+    const animOut = lottie.loadAnimation({
+      container: animationOutContainer.current,
+      renderer: 'svg',
+      loop: false,
+      autoplay: false,
+      path: '/assets/animations/success-out.json',
+    });
 
-    setLottieAnimation(anim);
+    setAnim2(animOut);
+
+    if (showAnimation) {
+      animIn.play();
+      setTimeout(() => {
+        setHasAnimated(true);
+      }, 2000);
+    }
   }, [showAnimation]);
 
-  // useEffect(() => {
-  //   console.debug('useEffect');
-  //   const anim = lottie.loadAnimation({
-  //     container: animationContainer.current,
-  //     renderer: 'svg',
-  //     loop: false,
-  //     autoplay: false,
-  //     path: '/assets/animations/success.json',
-  //   });
-
-  //   setLottieAnimation(anim);
-  // }, []);
-
-  // useEffect(() => {
-  //   if (showAnimation) {
-  //     lottieAnimation.playSegments(segments.in, true);
-  //   }
-  // }, [showAnimation]);
+  useEffect(() => {
+    if (anim2 && runAnimOut) {
+      anim2.play();
+    }
+  }, [runAnimOut]);
 
   const availableDates = [
     '9.00 on Saturday 14 November',
@@ -76,7 +67,16 @@ export const BookViewing = ({
   return (
     <WrappingDiv>
       {showAnimation ? (
-        <AnimationContainer ref={animationContainer} />
+        <>
+          <AnimationContainer
+            ref={animationContainer}
+            hasAnimated={hasAnimated}
+          />
+          <AnimationContainer
+            ref={animationOutContainer}
+            hasAnimated={!hasAnimated}
+          />
+        </>
       ) : (
         <RadioButtonContainer>
           {availableDates.map((x, i) => {
@@ -106,7 +106,10 @@ export const BookViewing = ({
           <Button
             color="primary"
             onClick={() => {
-              closeModal();
+              setRunAnimOut(true);
+              setTimeout(() => {
+                closeModal();
+              }, 800);
             }}
           >
             Done

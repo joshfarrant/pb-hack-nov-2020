@@ -26,7 +26,7 @@ export function Modal({ setModalOpen, isOpen }: TProps): ReactElement {
           onClick={() => setModalOpen(false)}
         />
       </StyledHeader>
-      <BookViewing />
+      <BookViewing closeModal={() => setModalOpen(false)} />
     </StyledContainer>
   );
 }

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const WrappingDiv = styled.div``;
 
@@ -69,4 +69,11 @@ export const ButtonContainer = styled.div`
 export const AnimationContainer = styled.div`
   height: 225px;
   width: 100%;
+  ${({ hasAnimated }) => {
+    if (hasAnimated) {
+      return css`
+        display: none;
+      `;
+    }
+  }}
 `;
