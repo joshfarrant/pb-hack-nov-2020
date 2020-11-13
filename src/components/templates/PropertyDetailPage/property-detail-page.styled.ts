@@ -51,8 +51,9 @@ export const StyledDescription = styled(motion.p)`
   line-height: 24px;
   margin: 0 0 16px;
 `;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 
-export const Image = styled(motion.div)`
+export const Image = styled(motion.div)<any>`
   background-image: url(${({ imgSrc }) => imgSrc});
   width: 100%;
   height: 212px;

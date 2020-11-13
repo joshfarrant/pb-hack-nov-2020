@@ -66,7 +66,8 @@ export const ButtonContainer = styled.div`
   padding: 0;
 `;
 
-export const AnimationContainer = styled.div`
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const AnimationContainer = styled.div<any>`
   height: 225px;
   width: 100%;
   ${({ hasAnimated }) => {
