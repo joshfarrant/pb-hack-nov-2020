@@ -6,7 +6,7 @@ import { NextSeo } from 'next-seo';
 import {
   PageMain,
   StartDemoLink,
-  BlockSpan,
+  LogoImg,
   BlockSpanVariable,
   StartJokeButton,
   JokeP,
@@ -65,7 +65,10 @@ export const HomePage = (): ReactElement => {
       </Head>
       <NextSeo title="PB Hack" description="Site description" />
       <h1>
-        <BlockSpan>I can&apos;t believe it&apos;s not native</BlockSpan>
+        <LogoImg
+          src="/assets/images/text-image.png"
+          alt="I can't believe it's not native"
+        />
         <BlockSpanVariable> PWA Demo</BlockSpanVariable>
       </h1>
 

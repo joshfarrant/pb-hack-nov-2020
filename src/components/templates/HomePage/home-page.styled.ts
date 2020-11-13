@@ -10,6 +10,10 @@ export const PageMain = styled.main`
   text-align: center;
 `;
 
+export const LogoImg = styled.img`
+  max-width: 320px;
+`;
+
 export const StartDemoLink = styled(motion.a)`
   font-size: 30px;
   color: white;
